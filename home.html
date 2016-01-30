@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="jumbotron.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header clearfix">
+            <!--<nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/sign-in/">Sign In</a></li>
+            <!-- <li role="presentation"><a href="#">Contact</a></li> 
+          </ul>
+        </nav> -->
+            <h3 class="text-muted">SIP Communicator</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <form id="identity-form" class="form-horizontal">
+                    <label class="" style="width: 100%;" align="center" id="txtStatus">Disconnected</label>
+                    <div class="form-group">
+                        <label for="sip-id">SIP Id</label>
+                        <input type="text" class="form-control" id="address-input" value="kolade@peercom.onsip.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password-input" value="J3d3k0l@">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" id="auth-button">Sign in</button>
+                        <!-- <button class="btn btn-danger" >Sign Out</button>-->
+                    </div>
+                </form>
+                <div id="user-details" style="display: none;">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">User Details</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>User details</p>
+                            <button class="btn btn-danger">Sign Out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8" id="user-agent" style="display: none">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Remote Video</h3>
+                    </div>
+                    <div class="panel-body">
+                        <video id="remote-media"></video>
+                    </div>
+                </div>
+
+                <div class="form-inline">
+                    <label>SIP Address
+                        <input type="text" id="destination-input" class="form-control" />
+                    </label>
+
+                    <button id="invite-button" class="btn btn-info">Make Call</button>
+                    <button id="accept-button" class="btn btn-success" disabled>Accept Call</button>
+                    <button id="terminate-button" class="btn btn-danger" disabled>End Call</button>
+                </div>
+
+
+
+                <div id="volume-bar">
+                    <input type="range" id="volume-range" min="0" max="100" value="50" />
+                    <button id="mute-button" class="btn btn-info">Mute</button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <audio id="ringtone" loop src="audio/ringtone.wav" />
+        <audio id="ringbacktone" loop src="audio/ringbacktone.wav" /> -->
+    </div>
+
+    <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="http://sipjs.com/download/sip-0.6.4.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
